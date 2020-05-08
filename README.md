@@ -4,10 +4,10 @@ git clone https://github.com/deadlight1/registration_test_task.git
 maven: clean, install
 
 # Project structure and the decisions made
-1. I wrote unit test only for service layer,
+1.I wrote unit test only for service layer,
  for controller and repository layers I did not.
 
-2. I understand that it is bad practice to contain js and html in one file,
+2.I understand that it is bad practice to contain js and html in one file,
 but I am sure that this is not critical for the test task.
 
 3.By the way I wrote integration test, just for myself.
