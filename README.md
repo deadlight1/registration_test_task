@@ -1,7 +1,11 @@
 # Registration Test Task
-How to run without docker:
-git clone https://github.com/deadlight1/registration_test_task.git
-maven: clean, install
+### How to run without docker:
+
+1. git clone https://github.com/deadlight1/registration_test_task.git
+2. maven: clean, install
+
+### How to run with heroku (For manual testing):
+Follow this link: https://registration-test-task.herokuapp.com
 
 # Task
 The purpose of this assignment is to put your Java capabilities to a test with respect to writing web based  applications, write high quality code and produce intuitive user interfaces. Your skills in Spring and Hibernate are also considered. 
