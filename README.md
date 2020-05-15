@@ -14,9 +14,13 @@ Functional requirements:
     • Only authenticated users may view the “Hello World!” dummy page  
 Technical requirements:  
     • Use Spring Framework as a container
-    • Use Spring Security to handle authentication  	
-    • Store the account settings in a SQL database using Hibernate (you can use any DB either in memory - H2, HSQL or MySql) 
+    
+    • Use Spring Security to handle authentication  
+    
+    • Store the account settings in a SQL database using Hibernate (you can use any DB either in memory - H2, HSQL or MySql)
+    
     • Store passwords securely  	
+    
     • Multiple browser support 	
     • Use valid XHTML and CSS  	
     • Must provide unit tests using JUnit 	
