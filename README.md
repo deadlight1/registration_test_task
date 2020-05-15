@@ -6,6 +6,7 @@ maven: clean, install
 # Task
 The purpose of this assignment is to put your Java capabilities to a test with respect to writing web based  applications, write high quality code and produce intuitive user interfaces. Your skills in Spring and Hibernate are also considered. 
 We want to protect our business critical “Hello World!” web page from non-registered users. Only  registered users are granted access to the page.  
+
 Functional requirements:  
 
     • Anonymous users may register by creating a user account from the login page  
