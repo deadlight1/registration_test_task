@@ -36,7 +36,10 @@ public class RegistrationServiceTest {
 
     @Before
     public void init() {
-        registrationService = new RegistrationServiceImpl(userRepository, passwordEncoder, modelMapper);
+        RegistrationServiceImpl registrationServiceImpl = new RegistrationServiceImpl(userRepository, modelMapper);
+        registrationServiceImpl.setPasswordEncoder(passwordEncoder);
+        registrationService = registrationServiceImpl;
+
         userDto = UserDto.builder()
                 .username("test@gmail.com")
                 .password("ads@WADS21SAXs")

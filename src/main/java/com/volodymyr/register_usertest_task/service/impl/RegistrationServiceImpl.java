@@ -5,9 +5,10 @@ import com.volodymyr.register_usertest_task.model.entity.User;
 import com.volodymyr.register_usertest_task.model.enums.Authority;
 import com.volodymyr.register_usertest_task.repository.UserRepository;
 import com.volodymyr.register_usertest_task.service.RegistrationService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +18,12 @@ import static com.volodymyr.register_usertest_task.model.enums.Authority.USER;
 
 @Slf4j
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class RegistrationServiceImpl implements RegistrationService {
 
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+    //Circular Dependencies
+    private PasswordEncoder passwordEncoder;
     private final ModelMapper mapper;
 
     @Override
@@ -40,5 +42,10 @@ public class RegistrationServiceImpl implements RegistrationService {
         }});
         userRepository.save(user);
         return true;
+    }
+
+    @Autowired
+    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
     }
 }
